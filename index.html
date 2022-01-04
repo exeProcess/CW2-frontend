@@ -55,13 +55,9 @@
                 /*addToCart() {
                     this.cart.push(this.lesson.id);
                 },*/
-                getAllLesson(){
-                    fetch('https://groupcw2server.herokuapp.com/lesson')
-                    .then((res) => {
-                        res.json().then((data) => {
-                        this.lessons = data
-                    })
-                    })
+                async getAllLesson(){
+                    const lesson = await fetch('https://groupcw2server.herokuapp.com/lesson')
+                    this.lessons =  await lesson.json()
                 }
             },
             mounted(){
