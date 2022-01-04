@@ -58,9 +58,9 @@
                 getAllLesson(){
                     fetch('https://groupcw2server.herokuapp.com/lesson')
                     .then((res) => {
-                        res.json()
-                    }).then((data) => {
+                        res.json().then((data) => {
                         this.lessons = data
+                    })
                     })
                 }
             },
