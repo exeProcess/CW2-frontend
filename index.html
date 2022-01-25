@@ -20,13 +20,13 @@
         <main>
             <div class="row container mx-auto">
                 <div class="card col-3 border-0" v-for="lesson in lessons" >
-                    <div class="h-80 mx-auto border" style="width:90%">
+                    <div class="h-80 mx-auto border" style="width:95%">
                         <div class="card-body">
                             
                             <!--p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <a href="#" class="btn btn-primary">Go somewhere</a-->
-                              <h2>Subject: ${{lesson.title}}</h2>
-                      <p>Location: ${{lesson.location}}</p>
+                              <h2>Subject:</h2>${{lesson.title}}
+                      <p>Location:</p>${{lesson.location}}
                       <p>PRICE:${{lesson.price}}</p>
                       <!--p>NUMBER OF SPACES: {{lesson.availableInventory - cartItemCount}}</p-->
                       <!--button v-on:click='addToCart' v-if='canAddToCart'>Add to cart</button>
