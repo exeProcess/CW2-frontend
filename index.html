@@ -56,8 +56,12 @@
                     this.cart.push(this.lesson.id);
                 },*/
                 async getAllLesson(){
-                    const lesson = await fetch('https://groupcw2server.herokuapp.com/lesson')
-                    this.lessons =  await lesson.json()
+                    try {
+                        const lesson = await fetch('https://groupcw2server.herokuapp.com/lesson')
+                        this.lessons =  await lesson.json()   
+                    } catch (error) {
+                        console.log(error);
+                    }
                 }
             },
             mounted(){
